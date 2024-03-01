@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+safaricom:
+  daraja:
+    consumer-key: yvnrZpq0VZJwrP0I6cmEA8bGFlioc0c4
+    consumer-secret: xFAkBR1sQ8fpQLiR
+    shortcode: 174379
+    passkey: bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
+    callback-url: http://102.219.192.24:1880/restgateway/services/MPESASTK/callback
+    grant_type: client_credentials
+    Authorization_url: https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials
+    InitiateURL: https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
+    password: MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjMwNTE5MTgxMzI3
+    transactionType: CustomerPayBillOnline
+    timestamp: 20230519181327
+
+spring:
+  mvc:
+    converters:
+      preferred-json-mapper: gson
+  datasource:
+    url: jdbc:mysql://localhost/testdb
+    port: 3306
+    username: root
+    password: mY@8q6uFNBJ10Hz
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
